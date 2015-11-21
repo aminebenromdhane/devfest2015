@@ -1,0 +1,8 @@
+<ion-view title="Home">
+  <ion-content> 
+  <div class="card" > 
+    <div class="item item-text-wrap"> 
+      Hey {{ homeCtrl.city.name }}       </div> 
+  </div>  
+    <div class="card" ng-repeat="weatherDay in homeCtrl.weatherDays">       <div class="item item-text-wrap">         {{ weatherDay.dt*1000 | date:'HH:mm EEEE' }} <br/>         It is {{ weatherDay.main.temp | celcus }} C       </div>     </div>    </ion-content>
+</ion-view>
